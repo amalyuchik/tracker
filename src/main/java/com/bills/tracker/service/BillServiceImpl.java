@@ -17,7 +17,7 @@ public class BillServiceImpl implements BillService {
     private BillDao dao;
 
     @Override
-    public List<Bill> selectEveryBill(Integer i) {
+    public List<Bill> selectEveryBill() {
         List<Bill> bill = new ArrayList<>();
         Bill myBill = new Bill();
         myBill.setBillId(1);
@@ -26,7 +26,7 @@ public class BillServiceImpl implements BillService {
         myBill.setBillAmountDue(20.78);
         myBill.setBillAmountPastDue(8.88);
         myBill.setBillType("Power");
-       // List<Bill> billSelect = dao.selectEveryBill(2);
-        return bill;
+        List<Bill> billSelect = dao.selectEveryBill();
+        return billSelect;
     }
 }

@@ -23,15 +23,14 @@ public class BillsController {
     @GetMapping(value = "/")
     public List<Bill> index(){
         List<Bill> bill = new ArrayList<>();
-       List<Bill> str = billService.selectEveryBill(2);
+       List<Bill> str = billService.selectEveryBill();
         System.out.println("testing sout");
         System.out.println("${jdbc.driverClassName}");
-        return bill;
+        return str;
            }
 
     @GetMapping(value = "/welcome")
     public String getWelcomeMessage(){
-        //List<Bill>  rrr = billService.getBills();
         return welcomeMessage+ " " + "${jdbc.driverClassName}";
    }
 }

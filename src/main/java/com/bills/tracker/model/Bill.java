@@ -2,10 +2,11 @@ package com.bills.tracker.model;
 
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Component
-public class Bill {
+public class Bill implements Serializable {
     private int billId;
     private String billName;
     private String billAccountNumber;
